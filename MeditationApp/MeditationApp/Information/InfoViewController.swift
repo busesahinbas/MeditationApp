@@ -8,12 +8,18 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-    @IBOutlet weak var infoTableView: UITableView!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var infoTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureBackground()
         setUpContainerTableView()
         registerCells()
+    }
+    
+    private func configureBackground() {
+        containerView.addGradient([UIColor.systemPurple, UIColor.white], locations: [0.0, 1.0],frame: containerView.frame)
     }
     
     private func setUpContainerTableView() {

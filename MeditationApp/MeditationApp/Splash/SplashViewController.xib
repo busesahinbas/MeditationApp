@@ -23,8 +23,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTs-QD-Vle">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="685"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aXk-lq-f5z">
-                            <rect key="frame" x="46.666666666666657" y="192.66666666666663" width="300" height="300"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aXk-lq-f5z">
+                            <rect key="frame" x="146.66666666666666" y="292.66666666666669" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="VtS-QF-hUL"/>
+                                <constraint firstAttribute="width" constant="100" id="qL1-py-EgF"/>
+                            </constraints>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
