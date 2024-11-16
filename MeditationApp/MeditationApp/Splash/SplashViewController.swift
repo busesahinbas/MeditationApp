@@ -19,7 +19,7 @@ class SplashViewController: UIViewController {
     }
     
     private func uploadImage() {
-        splashImageView.image = UIImage(named: "splash_icon")
+        splashImageView.image = UIImage(named: MeditationConstant.Image.splashIcon)
     }
     
     private func animateSplashImageView() {
