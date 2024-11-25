@@ -19,7 +19,7 @@ class InfoViewController: UIViewController {
     }
     
     private func configureBackground() {
-        containerView.addGradient([UIColor.systemPurple, UIColor.white], locations: [0.0, 1.0],frame: containerView.frame)
+        containerView.addGradient([UIColor.systemPurple, UIColor.black], locations: [0.0, 1.0],frame: containerView.frame)
     }
     
     private func setUpContainerTableView() {
@@ -31,20 +31,28 @@ class InfoViewController: UIViewController {
     
     private func registerCells() {
         infoTableView.register(UINib.init(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderTableViewCell")
+        infoTableView.register(UINib.init(nibName: "MainSettingsTableViewCell", bundle: nil), forCellReuseIdentifier: "MainSettingsTableViewCell")
     }
-    
 }
 
 extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let headerCell = infoTableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell", for: indexPath) as? HeaderTableViewCell {
-            headerCell.configureUI()
-            return headerCell
+            if indexPath.row == 0 {
+                if let headerCell = infoTableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell", for: indexPath) as? HeaderTableViewCell {
+                    headerCell.configureUI()
+                    return headerCell
+                }
+            } else {
+                if let settingsCell = infoTableView.dequeueReusableCell(withIdentifier: "MainSettingsTableViewCell", for: indexPath) as? MainSettingsTableViewCell {
+                    settingsCell.configureUI()
+                    return settingsCell
+                }
+            }
+            return UITableViewCell()
         }
-        return UITableViewCell()
     }
-}
