@@ -10,11 +10,16 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    // MARK: Properties
+    // UI
+    var window: UIWindow?
+    // Orientation
+    var orientation: UIInterfaceOrientationMask = .portrait
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // UI
+        setUpUI()
         return true
     }
 
@@ -79,3 +84,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK: UI Elements SetUp
+extension AppDelegate {
+    /// Sets up UI Elements for initial launch
+    private func setUpUI() {
+        // Orientation
+        setUpDeviceOrientation()
+        // Window
+        setUpWindow()
+    }
+    
+    /// Creates main **UIWindow** view and sets **rootViewController**
+    private func setUpWindow() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = SplashViewController()
+        window?.makeKeyAndVisible()
+    }
+}
+
+// MARK: Orientation
+extension AppDelegate {
+    func application(
+        _ application: UIApplication,
+        supportedInterfaceOrientationsFor window: UIWindow?
+    ) -> UIInterfaceOrientationMask {
+        return orientation
+    }
+
+    /// Sets device orientation for initial launch
+    private func setUpDeviceOrientation() {
+        orientation = .portrait
+    }
+}
