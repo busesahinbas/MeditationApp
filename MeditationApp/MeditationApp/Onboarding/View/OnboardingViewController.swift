@@ -15,16 +15,11 @@ class OnboardingViewController: UIViewController {
 
     private var pages: [OnboardingPage] = []
     private var currentPage = 0
+    private let viewModel = OnboardingViewModel(dataProvider: DataProvider())
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        pages = [
-            OnboardingPage(title: "Welcome", description: "Discover new ways to meditate."),
-            OnboardingPage(title: "Relax", description: "Find peace and balance in life."),
-            OnboardingPage(title: "Focus", description: "Stay sharp and productive.")
-        ]
-
+        pages = viewModel.getPages()
         setup()
     }
 
@@ -32,7 +27,6 @@ class OnboardingViewController: UIViewController {
         setupPageControl()
         nextButton.setTitleColor(.white, for: .normal)
         nextButton.layer.cornerRadius = 10
-
     }
 
     func setupPageControl() {
