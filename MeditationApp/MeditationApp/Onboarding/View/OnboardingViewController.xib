@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingViewController" customModule="MeditationApp" customModuleProvider="target">
             <connections>
                 <outlet property="descriptionLabel" destination="IQo-l9-6Fb" id="F0J-Si-DUA"/>
+                <outlet property="imageView" destination="Kpm-1B-EDO" id="OKv-m9-1Wu"/>
                 <outlet property="nextButton" destination="8HX-YB-dT0" id="1K1-WV-gqf"/>
                 <outlet property="pageControl" destination="wfm-35-f9E" id="4o0-9n-pxZ"/>
                 <outlet property="titleLabel" destination="ZGa-od-mZN" id="JXU-Ny-7lW"/>
@@ -35,6 +36,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="hCi-RK-twg"/>
                             </constraints>
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Next">
                                 <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>

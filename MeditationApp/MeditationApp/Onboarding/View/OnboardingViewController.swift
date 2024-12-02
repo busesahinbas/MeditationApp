@@ -11,6 +11,7 @@ class OnboardingViewController: UIViewController {
     @IBOutlet private(set) weak var titleLabel: UILabel!
     @IBOutlet private(set) weak var descriptionLabel: UILabel!
     @IBOutlet private(set) weak var nextButton: UIButton!
+    @IBOutlet private(set) weak var imageView: UIImageView!
     @IBOutlet private(set) weak var pageControl: UIPageControl!
 
     private var pages: [OnboardingPage] = []
@@ -57,6 +58,7 @@ class OnboardingViewController: UIViewController {
         let page = pages[currentPage]
         titleLabel.text = page.title
         descriptionLabel.text = page.description
+        imageView.image = UIImage(named: page.imageName)
 
         if currentPage == pages.count - 1 {
             nextButton.setTitle("Get Started", for: .normal)
