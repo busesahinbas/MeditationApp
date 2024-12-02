@@ -51,7 +51,12 @@ class OnboardingViewController: UIViewController {
     }
 
     private func navigateToMainApp() {
-      //TODO: navigate to dashboard
+        let dashboardVC = DashboardViewController(nibName: "DashboardViewController", bundle: nil)
+        
+        let navigationController = UINavigationController(rootViewController: dashboardVC)
+        
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true, completion: nil)
     }
     
     private func updatePage() {
