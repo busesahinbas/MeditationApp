@@ -13,13 +13,13 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         uploadImage()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.animateSplashImageView()
         }
     }
     
     private func uploadImage() {
-        splashImageView.image = UIImage(named: MeditationConstant.Image.splashIcon)
+        splashImageView.image = UIImage(named: Constants.Images.Splash.splashIcon)
     }
     
     private func animateSplashImageView() {
@@ -32,11 +32,10 @@ class SplashViewController: UIViewController {
     }
     
     private func navigateToMainViewController() {
-        let mainVC = ViewController()
+        let onboardingVC = OnboardingViewController(nibName: "OnboardingViewController", bundle: nil)
         
-        if let window = view.window {
-            window.rootViewController = mainVC
-            UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: nil, completion: nil)
-        }
+        let navigationController = UINavigationController(rootViewController: onboardingVC)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true, completion: nil)
     }
 }

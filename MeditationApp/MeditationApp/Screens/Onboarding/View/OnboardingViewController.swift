@@ -54,7 +54,6 @@ class OnboardingViewController: UIViewController {
         let dashboardVC = DashboardViewController(nibName: "DashboardViewController", bundle: nil)
         
         let navigationController = UINavigationController(rootViewController: dashboardVC)
-        
         navigationController.modalPresentationStyle = .fullScreen
         present(navigationController, animated: true, completion: nil)
     }

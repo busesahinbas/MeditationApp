@@ -11,9 +11,9 @@ import UIKit
 class DataProvider {
     func fetchOnboardingData() -> [OnboardingPage] {
         return [
-            OnboardingPage(title: "Welcome", description: "Discover new ways to meditate.", imageName: Constants.ImageNames.Onboarding.firstImage),
-            OnboardingPage(title: "Relax", description: "Find peace and balance in life.", imageName: Constants.ImageNames.Onboarding.secondImage),
-            OnboardingPage(title: "Focus", description: "Stay sharp and productive.", imageName: Constants.ImageNames.Onboarding.thirdImage)
+            OnboardingPage(title: "Welcome", description: "Discover new ways to meditate.", imageName: Constants.Images.Onboarding.firstImage),
+            OnboardingPage(title: "Relax", description: "Find peace and balance in life.", imageName: Constants.Images.Onboarding.secondImage),
+            OnboardingPage(title: "Focus", description: "Stay sharp and productive.", imageName: Constants.Images.Onboarding.thirdImage)
         ]
     }
 }

@@ -26,7 +26,6 @@ class InfoViewController: UIViewController {
         infoTableView.separatorColor = UIColor.clear
         infoTableView.contentInset = UIEdgeInsets.zero
         infoTableView.contentInsetAdjustmentBehavior = .never
-        automaticallyAdjustsScrollViewInsets = false
     }
     
     private func registerCells() {

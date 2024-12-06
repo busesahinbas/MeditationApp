@@ -8,11 +8,14 @@
 import Foundation
 
 enum Constants {
-    enum ImageNames {
+    enum Images {
         enum Onboarding {
             static let firstImage = "onboarding1"
             static let secondImage = "onboarding2"
             static let thirdImage = "onboarding3"
+        }
+        enum Splash {
+            static let splashIcon = "splash_icon"
         }
     }
 }
