@@ -22,6 +22,7 @@ class DashboardViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib.init(nibName: "FeelTableViewCell", bundle: nil), forCellReuseIdentifier: "FeelTableViewCell")
+        tableView.register(UINib.init(nibName: "DailyTableViewCell", bundle: nil), forCellReuseIdentifier: "DailyTableViewCell")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
     }
 }
@@ -37,9 +38,14 @@ extension DashboardViewController: UITableViewDataSource {
                 return feelCell
             }
         }
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Row \(indexPath.row + 1)" // Example text
-        return cell
+        if indexPath.row == 3 {
+            if let dailyCell = tableView.dequeueReusableCell(withIdentifier: "DailyTableViewCell", for: indexPath) as? DailyTableViewCell {
+                return dailyCell
+            }
+        }
+        let defaultCell = UITableViewCell()
+        defaultCell.textLabel?.text = "Row \(indexPath.row + 1)" // Example text
+        return defaultCell
     }
 }
 
