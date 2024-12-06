@@ -53,7 +53,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Hr-oV-iZy">
-                    <rect key="frame" x="0.0" y="125" width="393" height="693"/>
+                    <rect key="frame" x="16" y="125" width="361" height="693"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
@@ -63,13 +63,13 @@
                 <constraint firstItem="kjW-AU-cs4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ifd-hY-vrY"/>
                 <constraint firstItem="mwR-qO-6hL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="KLD-aW-smg"/>
                 <constraint firstItem="mwR-qO-6hL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OIi-5J-GSl"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Hr-oV-iZy" secondAttribute="trailing" id="SrM-rR-gX9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Hr-oV-iZy" secondAttribute="trailing" constant="16" id="SrM-rR-gX9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kjW-AU-cs4" secondAttribute="trailing" constant="16" id="cHW-i7-nWg"/>
                 <constraint firstItem="kjW-AU-cs4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dyJ-o6-3dj"/>
                 <constraint firstAttribute="bottom" secondItem="mwR-qO-6hL" secondAttribute="bottom" id="g6d-l6-5nj"/>
                 <constraint firstItem="9Hr-oV-iZy" firstAttribute="top" secondItem="kjW-AU-cs4" secondAttribute="bottom" constant="16" id="jbW-XR-ODG"/>
                 <constraint firstItem="mwR-qO-6hL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tbk-Hn-Rec"/>
-                <constraint firstItem="9Hr-oV-iZy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vg5-nE-Zd4"/>
+                <constraint firstItem="9Hr-oV-iZy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="vg5-nE-Zd4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9Hr-oV-iZy" secondAttribute="bottom" id="yQ6-0M-hwy"/>
             </constraints>
             <point key="canvasLocation" x="58" y="21"/>

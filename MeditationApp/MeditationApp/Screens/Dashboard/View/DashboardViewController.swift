@@ -21,6 +21,7 @@ class DashboardViewController: UIViewController {
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib.init(nibName: "FeelTableViewCell", bundle: nil), forCellReuseIdentifier: "FeelTableViewCell")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
     }
 }
@@ -31,7 +32,11 @@ extension DashboardViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Dequeue and configure your cell
+        if indexPath.row == 0 {
+            if let feelCell = tableView.dequeueReusableCell(withIdentifier: "FeelTableViewCell", for: indexPath) as? FeelTableViewCell {
+                return feelCell
+            }
+        }
         let cell = UITableViewCell()
         cell.textLabel?.text = "Row \(indexPath.row + 1)" // Example text
         return cell
