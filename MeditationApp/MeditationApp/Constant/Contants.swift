@@ -9,6 +9,9 @@ import Foundation
 
 enum Constants {
     enum Images {
+        
+        static let appIcon = "Logo"
+        
         enum Onboarding {
             static let firstImage = "onboarding1"
             static let secondImage = "onboarding2"
@@ -16,6 +19,10 @@ enum Constants {
         }
         enum Splash {
             static let splashIcon = "splash_icon"
+        }
+        
+        enum Read {
+            static let readImage = "read_image"
         }
     }
 }
