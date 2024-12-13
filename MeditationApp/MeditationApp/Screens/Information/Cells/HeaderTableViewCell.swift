@@ -12,7 +12,7 @@ class HeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var headTitleLabel: UILabel!
   
     func configureUI() {
-        appImageView.image = UIImage(named: Constants.Images.Splash.splashIcon)
+        appImageView.image = UIImage(named: Constants.Images.appIcon)
         headTitleLabel.text = "Information"
     }
 

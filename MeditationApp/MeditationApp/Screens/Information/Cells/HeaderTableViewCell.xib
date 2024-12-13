@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmN-5l-Cf2">
-                        <rect key="frame" x="16" y="160" width="251" height="152"/>
+                        <rect key="frame" x="16" y="162" width="251" height="150"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="TTD-H7-7Z9"/>
                         </constraints>
@@ -34,13 +34,13 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tof-o2-sda">
-                        <rect key="frame" x="16" y="32" width="251" height="112"/>
+                        <rect key="frame" x="16" y="32" width="251" height="114"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OUM-gZ-KgI">
-                                <rect key="frame" x="85.666666666666671" y="16" width="80.000000000000014" height="80"/>
+                                <rect key="frame" x="100.66666666666667" y="32" width="50.000000000000014" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="YIp-OP-hnY"/>
-                                    <constraint firstAttribute="height" constant="80" id="zbR-Vj-4DR"/>
+                                    <constraint firstAttribute="width" constant="50" id="YIp-OP-hnY"/>
+                                    <constraint firstAttribute="height" constant="50" id="zbR-Vj-4DR"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -48,7 +48,7 @@
                         <constraints>
                             <constraint firstItem="OUM-gZ-KgI" firstAttribute="centerY" secondItem="Tof-o2-sda" secondAttribute="centerY" id="UUC-Hn-9TE"/>
                             <constraint firstItem="OUM-gZ-KgI" firstAttribute="centerX" secondItem="Tof-o2-sda" secondAttribute="centerX" id="bRx-zk-Goc"/>
-                            <constraint firstItem="OUM-gZ-KgI" firstAttribute="top" secondItem="Tof-o2-sda" secondAttribute="top" constant="16" id="mEc-xW-hfx"/>
+                            <constraint firstItem="OUM-gZ-KgI" firstAttribute="top" secondItem="Tof-o2-sda" secondAttribute="top" constant="32" id="mEc-xW-hfx"/>
                         </constraints>
                     </view>
                 </subviews>
