@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoViewController" customModule="MeditationApp" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImageView" destination="2Ke-EU-zhy" id="Vnh-fh-fwX"/>
                 <outlet property="containerView" destination="SEd-ac-Ibp" id="q5q-hW-fRA"/>
                 <outlet property="infoTableView" destination="DY9-hD-eoL" id="JsG-bo-RwP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -23,6 +24,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEd-ac-Ibp" userLabel="Container View">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="2Ke-EU-zhy">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        </imageView>
                         <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY9-hD-eoL">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -36,8 +40,14 @@
                     <constraints>
                         <constraint firstItem="DY9-hD-eoL" firstAttribute="leading" secondItem="SEd-ac-Ibp" secondAttribute="leading" id="3Xc-LR-FJQ"/>
                         <constraint firstAttribute="bottom" secondItem="DY9-hD-eoL" secondAttribute="bottom" id="Ehx-Sl-8M9"/>
+                        <constraint firstItem="2Ke-EU-zhy" firstAttribute="width" secondItem="SEd-ac-Ibp" secondAttribute="width" id="Grg-ab-1sc"/>
                         <constraint firstItem="DY9-hD-eoL" firstAttribute="top" secondItem="SEd-ac-Ibp" secondAttribute="top" id="Lds-sX-S8r"/>
+                        <constraint firstItem="2Ke-EU-zhy" firstAttribute="top" secondItem="SEd-ac-Ibp" secondAttribute="top" id="QDd-Tx-LCa"/>
                         <constraint firstAttribute="trailing" secondItem="DY9-hD-eoL" secondAttribute="trailing" id="bPd-Qb-X3d"/>
+                        <constraint firstAttribute="bottom" secondItem="2Ke-EU-zhy" secondAttribute="bottom" id="fI8-0L-W8H"/>
+                        <constraint firstItem="2Ke-EU-zhy" firstAttribute="leading" secondItem="SEd-ac-Ibp" secondAttribute="leading" id="fjV-Cz-Y3u"/>
+                        <constraint firstAttribute="trailing" secondItem="2Ke-EU-zhy" secondAttribute="trailing" id="vqL-l5-wdo"/>
+                        <constraint firstItem="2Ke-EU-zhy" firstAttribute="height" secondItem="SEd-ac-Ibp" secondAttribute="height" id="zCV-wN-D1m"/>
                     </constraints>
                 </view>
             </subviews>
@@ -53,4 +63,7 @@
             <point key="canvasLocation" x="31" y="20"/>
         </view>
     </objects>
+    <resources>
+        <image name="background" width="407" height="1081"/>
+    </resources>
 </document>

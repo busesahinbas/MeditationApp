@@ -9,20 +9,17 @@ import UIKit
 
 class InfoViewController: UIViewController {
     @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var backgroundImageView: UIImageView!
     @IBOutlet private weak var infoTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureBackground()
         setUpContainerTableView()
         registerCells()
     }
     
-    private func configureBackground() {
-        containerView.addGradient([UIColor.systemPurple, UIColor.black], locations: [0.0, 1.0],frame: containerView.frame)
-    }
-    
     private func setUpContainerTableView() {
+        backgroundImageView.image = UIImage(named: "background")
         infoTableView.separatorColor = UIColor.clear
         infoTableView.contentInset = UIEdgeInsets.zero
         infoTableView.contentInsetAdjustmentBehavior = .never
