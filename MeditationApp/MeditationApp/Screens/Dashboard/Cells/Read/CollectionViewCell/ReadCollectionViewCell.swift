@@ -7,10 +7,11 @@
 
 import UIKit
 
-class ReadCollectionViewCell: UICollectionViewCell {
-    @IBOutlet private weak var readInfoLabel: UILabel!
-    @IBOutlet private weak var infoBadgeButton: UIButton!
-    @IBOutlet private weak var readImageView: UIImageView!
+final class ReadCollectionViewCell: UICollectionViewCell {
+    @IBOutlet private(set) weak var readInfoLabel: UILabel!
+    @IBOutlet private(set) weak var readImageView: UIImageView!
+    @IBOutlet private(set) weak var minView: UIView!
+    @IBOutlet private(set) weak var minLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +24,7 @@ class ReadCollectionViewCell: UICollectionViewCell {
     
     private func setUpView() {
         readInfoLabel.text = "Let’s create find your mood and create your own genarated mediation!"
-        infoBadgeButton.setTitle("Selectable min", for: .normal)
         readImageView.image = UIImage(named: Constants.Images.Read.readImage)
+        minView.layer.cornerRadius = 5
     }
 }
