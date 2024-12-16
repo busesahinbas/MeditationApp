@@ -23,6 +23,7 @@ class DashboardViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib.init(nibName: "FeelTableViewCell", bundle: nil), forCellReuseIdentifier: "FeelTableViewCell")
         tableView.register(UINib.init(nibName: "DailyTableViewCell", bundle: nil), forCellReuseIdentifier: "DailyTableViewCell")
+        tableView.register(UINib.init(nibName: "PlaylistTableViewCell", bundle: nil), forCellReuseIdentifier: "PlaylistTableViewCell")
         tableView.register(UINib.init(nibName: "ReadTableViewCell", bundle: nil), forCellReuseIdentifier: "ReadTableViewCell")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
     }
@@ -34,24 +35,27 @@ extension DashboardViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        switch indexPath.row {
+        case 0:
             if let feelCell = tableView.dequeueReusableCell(withIdentifier: "FeelTableViewCell", for: indexPath) as? FeelTableViewCell {
                 return feelCell
             }
-        }
-        if indexPath.row == 1 {
+        case 1:
             if let readCell = tableView.dequeueReusableCell(withIdentifier: "ReadTableViewCell", for: indexPath) as? ReadTableViewCell {
                 return readCell
             }
-        }
-        if indexPath.row == 3 {
+        case 2:
+            if let playlistCell = tableView.dequeueReusableCell(withIdentifier: "PlaylistTableViewCell", for: indexPath) as? PlaylistTableViewCell {
+                return playlistCell
+            }
+        case 3:
             if let dailyCell = tableView.dequeueReusableCell(withIdentifier: "DailyTableViewCell", for: indexPath) as? DailyTableViewCell {
                 return dailyCell
             }
+        default:
+            return UITableViewCell()
         }
-        let defaultCell = UITableViewCell()
-        defaultCell.textLabel?.text = "Row \(indexPath.row + 1)" // Example text
-        return defaultCell
+        return UITableViewCell()
     }
 }
 
