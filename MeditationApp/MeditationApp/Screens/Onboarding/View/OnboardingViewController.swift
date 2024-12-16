@@ -52,10 +52,8 @@ class OnboardingViewController: UIViewController {
 
     private func navigateToMainApp() {
         let dashboardVC = TabBarViewController(nibName: "TabBarViewController", bundle: nil)
-        
-        let navigationController = UINavigationController(rootViewController: dashboardVC)
-        navigationController.modalPresentationStyle = .fullScreen
-        present(navigationController, animated: true, completion: nil)
+        dashboardVC.modalPresentationStyle = .fullScreen
+        present(dashboardVC, animated: true, completion: nil)
     }
     
     private func updatePage() {
