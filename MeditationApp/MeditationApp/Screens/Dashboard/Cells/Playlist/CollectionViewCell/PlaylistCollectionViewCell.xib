@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PlaylistCollectionViewCell" customModule="MeditationApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="153" height="216"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="153" height="216"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCW-qL-AlP">
+                        <rect key="frame" x="0.0" y="0.0" width="153" height="216"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 1" translatesAutoresizingMaskIntoConstraints="NO" id="F7Q-A1-ES1">
+                                <rect key="frame" x="4" y="4" width="145" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="136" id="J45-RY-fTe"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mediate to the Sounds of Nature" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bp2-nG-wAT">
+                                <rect key="frame" x="4" y="148" width="145" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V74-gx-cgh">
+                                <rect key="frame" x="4" y="190" width="45" height="18"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="zK3-j4-U8S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="F7Q-A1-ES1" firstAttribute="leading" secondItem="CCW-qL-AlP" secondAttribute="leading" constant="4" id="3dZ-2C-5vw"/>
+                            <constraint firstAttribute="trailing" secondItem="F7Q-A1-ES1" secondAttribute="trailing" constant="4" id="BfK-U4-Msh"/>
+                            <constraint firstItem="bp2-nG-wAT" firstAttribute="leading" secondItem="CCW-qL-AlP" secondAttribute="leading" constant="4" id="Cpr-PV-Dhk"/>
+                            <constraint firstAttribute="height" constant="216" id="DnE-90-u8Q"/>
+                            <constraint firstAttribute="bottom" secondItem="V74-gx-cgh" secondAttribute="bottom" constant="8" id="MQN-X5-bd2"/>
+                            <constraint firstItem="V74-gx-cgh" firstAttribute="leading" secondItem="CCW-qL-AlP" secondAttribute="leading" constant="4" id="Ss6-Df-b4Y"/>
+                            <constraint firstItem="bp2-nG-wAT" firstAttribute="top" secondItem="F7Q-A1-ES1" secondAttribute="bottom" constant="8" id="lRm-Rc-mF5"/>
+                            <constraint firstItem="V74-gx-cgh" firstAttribute="top" secondItem="bp2-nG-wAT" secondAttribute="bottom" constant="8" id="nAW-xh-7KY"/>
+                            <constraint firstItem="F7Q-A1-ES1" firstAttribute="top" secondItem="CCW-qL-AlP" secondAttribute="top" constant="4" id="qAV-Pn-kRW"/>
+                            <constraint firstAttribute="trailing" secondItem="bp2-nG-wAT" secondAttribute="trailing" constant="4" id="vR4-a7-6XY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="CCW-qL-AlP" secondAttribute="bottom" id="X5l-vF-62D"/>
+                <constraint firstAttribute="trailing" secondItem="CCW-qL-AlP" secondAttribute="trailing" id="o5B-ay-rWP"/>
+                <constraint firstItem="CCW-qL-AlP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rZY-ua-Ga3"/>
+                <constraint firstItem="CCW-qL-AlP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xHP-yM-hj1"/>
+            </constraints>
+            <size key="customSize" width="169" height="216"/>
+            <point key="canvasLocation" x="153.43511450381678" y="77.464788732394368"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Image 1" width="256" height="256"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
