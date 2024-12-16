@@ -51,7 +51,7 @@ class OnboardingViewController: UIViewController {
     }
 
     private func navigateToMainApp() {
-        let dashboardVC = DashboardViewController(nibName: "DashboardViewController", bundle: nil)
+        let dashboardVC = TabBarViewController(nibName: "TabBarViewController", bundle: nil)
         
         let navigationController = UINavigationController(rootViewController: dashboardVC)
         navigationController.modalPresentationStyle = .fullScreen
