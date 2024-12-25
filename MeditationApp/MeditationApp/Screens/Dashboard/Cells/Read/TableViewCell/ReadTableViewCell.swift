@@ -11,7 +11,6 @@ class ReadTableViewCell: UITableViewCell {
     @IBOutlet private weak var pageTitleLabel: UILabel!
     @IBOutlet private weak var readCollectionView: UICollectionView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpCollectionViewLayout()
@@ -56,7 +55,6 @@ extension ReadTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
 }
 
 extension ReadTableViewCell: UICollectionViewDelegateFlowLayout {
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: readCollectionView.frame.width - 10, height: 135)
     }
