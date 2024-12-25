@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YhB-tQ-x3s">
-                        <rect key="frame" x="0.0" y="8" width="372" height="73"/>
+                        <rect key="frame" x="0.0" y="0.0" width="372" height="73"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Zoey!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66t-IF-Inr">
                                 <rect key="frame" x="0.0" y="0.0" width="372" height="32.666666666666664"/>
@@ -38,7 +38,7 @@
                         </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="0jD-GM-1AQ">
-                        <rect key="frame" x="0.0" y="89" width="372" height="104"/>
+                        <rect key="frame" x="0.0" y="81" width="372" height="104"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gQt-xv-bzx">
                                 <rect key="frame" x="0.0" y="0.0" width="75" height="104"/>
@@ -245,7 +245,7 @@
                     <constraint firstItem="0jD-GM-1AQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="alT-PS-2MO"/>
                     <constraint firstAttribute="bottom" secondItem="0jD-GM-1AQ" secondAttribute="bottom" constant="8" id="q4j-uB-00G"/>
                     <constraint firstItem="0jD-GM-1AQ" firstAttribute="top" secondItem="YhB-tQ-x3s" secondAttribute="bottom" constant="8" id="uv8-Sx-FtH"/>
-                    <constraint firstItem="YhB-tQ-x3s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="wdn-CR-ITD"/>
+                    <constraint firstItem="YhB-tQ-x3s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wdn-CR-ITD"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

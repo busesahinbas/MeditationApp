@@ -26,7 +26,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjW-AU-cs4">
-                    <rect key="frame" x="16" y="59" width="361" height="50"/>
+                    <rect key="frame" x="16" y="64" width="361" height="50"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 1" translatesAutoresizingMaskIntoConstraints="NO" id="tKo-zb-Rc0">
                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -65,13 +65,14 @@
                 <constraint firstItem="mwR-qO-6hL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OIi-5J-GSl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Hr-oV-iZy" secondAttribute="trailing" constant="16" id="SrM-rR-gX9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kjW-AU-cs4" secondAttribute="trailing" constant="16" id="cHW-i7-nWg"/>
-                <constraint firstItem="kjW-AU-cs4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dyJ-o6-3dj"/>
+                <constraint firstItem="kjW-AU-cs4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="dyJ-o6-3dj"/>
                 <constraint firstAttribute="bottom" secondItem="mwR-qO-6hL" secondAttribute="bottom" id="g6d-l6-5nj"/>
-                <constraint firstItem="9Hr-oV-iZy" firstAttribute="top" secondItem="kjW-AU-cs4" secondAttribute="bottom" constant="16" id="jbW-XR-ODG"/>
+                <constraint firstItem="9Hr-oV-iZy" firstAttribute="top" secondItem="kjW-AU-cs4" secondAttribute="bottom" id="jbW-XR-ODG"/>
                 <constraint firstItem="mwR-qO-6hL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tbk-Hn-Rec"/>
                 <constraint firstItem="9Hr-oV-iZy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="vg5-nE-Zd4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9Hr-oV-iZy" secondAttribute="bottom" id="yQ6-0M-hwy"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="58" y="21"/>
         </view>
     </objects>

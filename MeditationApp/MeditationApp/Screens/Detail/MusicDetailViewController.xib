@@ -16,7 +16,9 @@
                 <outlet property="musicImage" destination="JfO-eQ-Uig" id="c9J-4K-bOn"/>
                 <outlet property="musicName" destination="WQ0-mZ-J9H" id="3Rp-T6-uIx"/>
                 <outlet property="musicSlider" destination="wsP-mO-R8z" id="un6-Ap-qvI"/>
+                <outlet property="nextButton" destination="RuJ-Ih-rC9" id="CxN-SL-u63"/>
                 <outlet property="playButton" destination="9wU-Uh-TAa" id="fwq-va-yHy"/>
+                <outlet property="previousButton" destination="kxg-t3-aBz" id="kt0-gk-QPN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfO-eQ-Uig">
-                    <rect key="frame" x="0.0" y="0.0" width="336" height="684"/>
+                    <rect key="frame" x="0.0" y="0.0" width="336" height="650"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8Z-DO-kxR" userLabel="Music Control View">
@@ -57,10 +59,16 @@
                             <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </slider>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULJ-C1-LRu">
-                            <rect key="frame" x="78" y="164" width="180" height="60"/>
+                            <rect key="frame" x="18" y="164" width="300" height="60"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cly-pF-mAY">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxg-t3-aBz">
                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cly-pF-mAY">
+                                    <rect key="frame" x="60" y="0.0" width="60" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="LYg-dF-Koi"/>
                                         <constraint firstAttribute="height" constant="60" id="q42-Kb-fbb"/>
@@ -70,7 +78,7 @@
                                     <buttonConfiguration key="configuration" style="plain" title=" "/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wU-Uh-TAa">
-                                    <rect key="frame" x="60" y="0.0" width="60" height="60"/>
+                                    <rect key="frame" x="120" y="0.0" width="60" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="3Oq-yl-jmq"/>
                                         <constraint firstAttribute="height" constant="60" id="b0t-PO-05c"/>
@@ -80,11 +88,17 @@
                                     <buttonConfiguration key="configuration" style="plain" title=" "/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btg-Wm-Swu">
-                                    <rect key="frame" x="120" y="0.0" width="60" height="60"/>
+                                    <rect key="frame" x="180" y="0.0" width="60" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="Kz4-cU-QHG"/>
                                         <constraint firstAttribute="height" constant="60" id="tlj-Ij-MPw"/>
                                     </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuJ-Ih-rC9">
+                                    <rect key="frame" x="240" y="0.0" width="60" height="60"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title=" "/>
@@ -121,7 +135,7 @@
                 <constraint firstItem="c8Z-DO-kxR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="K39-cL-aWl"/>
                 <constraint firstItem="JfO-eQ-Uig" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Tyq-FS-BR4"/>
                 <constraint firstItem="JfO-eQ-Uig" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dDm-MS-lYd"/>
-                <constraint firstAttribute="bottom" secondItem="JfO-eQ-Uig" secondAttribute="bottom" id="f1X-sn-U6Q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JfO-eQ-Uig" secondAttribute="bottom" id="f1X-sn-U6Q"/>
                 <constraint firstAttribute="bottom" secondItem="c8Z-DO-kxR" secondAttribute="bottom" id="zCf-dF-UPf"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

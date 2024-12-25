@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 import AVFoundation
 
 class MusicDetailViewController: UIViewController {
@@ -16,10 +17,12 @@ class MusicDetailViewController: UIViewController {
     @IBOutlet weak var backwardButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var forwardButton: UIButton!
+    @IBOutlet weak var previousButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     private var audioPlayer: AVAudioPlayer?
     private var videoPlayer: AVPlayer?
-    private var videoLayer: AVPlayerLayer?
+    private var videoPlayerLayer: AVPlayerLayer?
     private var progressUpdateTimer: Timer?
     private var playlist: [String] = ["example", "example", "example"]
     private var currentTrackIndex: Int = 0
@@ -27,8 +30,45 @@ class MusicDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudioPlayer()
-        setupVideoPlayer()
         setupUI()
+        setupVideoBackground()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        videoPlayerLayer?.frame = musicImage.bounds
+    }
+    
+    private func setupVideoBackground() {
+        guard let videoURL = Bundle.main.url(forResource: "musicVideo", withExtension: "mov") else {
+            print("Video file not found.")
+            return
+        }
+        
+        videoPlayer = AVPlayer(url: videoURL)
+        videoPlayer?.actionAtItemEnd = .none
+        videoPlayerLayer = AVPlayerLayer(player: videoPlayer)
+        videoPlayerLayer?.frame = musicImage.bounds
+        videoPlayerLayer?.videoGravity = .resizeAspectFill
+        
+        if let videoPlayerLayer = videoPlayerLayer {
+            musicImage.layer.addSublayer(videoPlayerLayer)
+        }
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(loopVideo),
+            name: .AVPlayerItemDidPlayToEndTime,
+            object: videoPlayer?.currentItem
+        )
+        
+        videoPlayer?.play()
+    }
+    
+    @objc private func loopVideo() {
+        videoPlayer?.seek(to: .zero)
+        videoPlayer?.play()
     }
     
     private func setupUI() {
@@ -40,6 +80,12 @@ class MusicDetailViewController: UIViewController {
         
         forwardButton.setImage(UIImage(systemName: "goforward.10"), for: .normal)
         forwardButton.addTarget(self, action: #selector(didTapForward), for: .touchUpInside)
+        
+        nextButton.setImage(UIImage(systemName: "forward.end"), for: .normal)
+        nextButton.addTarget(self, action: #selector(didTapNext), for: .touchUpInside)
+        
+        previousButton.setImage(UIImage(systemName: "backward.end"), for: .normal)
+        previousButton.addTarget(self, action: #selector(didTapPrevious), for: .touchUpInside)
         
         musicSlider.addTarget(self, action: #selector(didSlideProgress), for: .valueChanged)
     }
@@ -64,25 +110,6 @@ class MusicDetailViewController: UIViewController {
         } catch {
             print("Failed to initialize audio player: \(error)")
         }
-    }
-    
-    private func setupVideoPlayer() {
-        guard let videoURL = Bundle.main.url(forResource: "musicVideo", withExtension: "mov") else {
-            print("Video file not found.")
-            return
-        }
-        
-        videoPlayer = AVPlayer(url: videoURL)
-        
-        videoLayer = AVPlayerLayer(player: videoPlayer)
-        videoLayer?.frame = musicImage.bounds
-        videoLayer?.videoGravity = .resizeAspectFill
-        
-        musicImage.layer.addSublayer(videoLayer!)
-        
-        videoPlayer?.play()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(didFinishPlayingVideo), name: .AVPlayerItemDidPlayToEndTime, object: videoPlayer?.currentItem)
     }
     
     @objc private func didFinishPlayingVideo() {

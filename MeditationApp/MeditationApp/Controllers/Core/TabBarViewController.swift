@@ -20,3 +20,4 @@ final class TabBarViewController: UITabBarController {
         setViewControllers([dashboardVC, infoVC], animated: false)
     }
 }
+
