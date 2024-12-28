@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol PlaylistTableViewCellDelegate: AnyObject {
+    func didSelectItem(at indexPath: IndexPath)
+}
+
 final class PlaylistTableViewCell: UITableViewCell {
     @IBOutlet private(set) weak var collectionView: UICollectionView!
+    
+    weak var delegate: PlaylistTableViewCellDelegate?
     
     // MARK: - Lifecycle
     override func awakeFromNib() {
@@ -55,6 +61,10 @@ extension PlaylistTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
             return UICollectionViewCell()
         }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectItem(at: indexPath)
     }
 }
 

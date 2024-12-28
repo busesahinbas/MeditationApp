@@ -46,6 +46,7 @@ extension DashboardViewController: UITableViewDataSource {
             }
         case 2:
             if let playlistCell = tableView.dequeueReusableCell(withIdentifier: "PlaylistTableViewCell", for: indexPath) as? PlaylistTableViewCell {
+                playlistCell.delegate = self
                 return playlistCell
             }
         case 3:
@@ -69,3 +70,11 @@ extension DashboardViewController: UITableViewDelegate {
     }
 }
 
+extension DashboardViewController: PlaylistTableViewCellDelegate {
+    func didSelectItem(at indexPath: IndexPath) {
+        let musicDetailVC = MusicDetailViewController(nibName: "MusicDetailViewController", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: musicDetailVC)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true, completion: nil)
+    }
+}
