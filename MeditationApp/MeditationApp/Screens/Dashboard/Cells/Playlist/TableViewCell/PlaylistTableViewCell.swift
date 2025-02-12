@@ -21,11 +21,7 @@ final class PlaylistTableViewCell: UITableViewCell {
         super.awakeFromNib()
         setUpCollectionViewLayout()
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
+
     // MARK: - Setup Methods
     private func setUpCollectionViewLayout() {
         collectionView.delegate = self
@@ -49,7 +45,6 @@ final class PlaylistTableViewCell: UITableViewCell {
 // MARK: - UICollectionView Delegate & DataSource
 extension PlaylistTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // Hücre sayısını döndürür
         return 10
     }
     

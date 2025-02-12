@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol ReadTableViewCellDelegate: AnyObject {
+    func didSelectRead(at index: Int)
+}
+
 class ReadTableViewCell: UITableViewCell {
     @IBOutlet private weak var pageTitleLabel: UILabel!
     @IBOutlet private weak var readCollectionView: UICollectionView!
+    
+    weak var delegate: ReadTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,6 +58,9 @@ extension ReadTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
         return UICollectionViewCell()
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectRead(at: indexPath.item)
+    }
 }
 
 extension ReadTableViewCell: UICollectionViewDelegateFlowLayout {

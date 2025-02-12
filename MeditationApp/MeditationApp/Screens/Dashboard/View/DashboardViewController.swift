@@ -14,7 +14,6 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupTableView()
     }
     
@@ -42,6 +41,7 @@ extension DashboardViewController: UITableViewDataSource {
             }
         case 1:
             if let readCell = tableView.dequeueReusableCell(withIdentifier: "ReadTableViewCell", for: indexPath) as? ReadTableViewCell {
+                readCell.delegate = self
                 return readCell
             }
         case 2:
@@ -76,5 +76,13 @@ extension DashboardViewController: PlaylistTableViewCellDelegate {
         let navigationController = UINavigationController(rootViewController: musicDetailVC)
         navigationController.modalPresentationStyle = .fullScreen
         present(navigationController, animated: true, completion: nil)
+    }
+}
+
+extension DashboardViewController: ReadTableViewCellDelegate {
+    func didSelectRead(at index: Int) {
+        let readDetailVC = ReadDetailViewController(nibName: "ReadDetailViewController", bundle: nil)
+        readDetailVC.modalPresentationStyle = .fullScreen
+        present(readDetailVC, animated: true)
     }
 }
